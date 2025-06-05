@@ -14,4 +14,129 @@ nav a {
     text-decoration: none;
     padding: 12px 16px;
     transition: background-color 0.3s ease;
+    border-radius: 200px;
+    border-bottom: #ecf0f1 2px solid;
 }
+
+.carousel-container {
+    position: relative; 
+    width: 100%;
+    max-width: 800px;
+    margin: 32px auto;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.25,.8,.25,1);
+    will-change: transform;
+}
+.carousel img {
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: 
+        transform 0.3s cubic-bezier(.25,.8,.25,1),
+        box-shadow 0.3s,
+        z-index 0.3s;
+    z-index: 1;
+    cursor: pointer;
+}
+.carousel img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+.carousel-btn { 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(44,62,80,0.7);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 20;
+    transition: background 0.2s;
+}
+.carousel-btn:hover {
+    background: #2c3e50;
+}
+.carousel-btn.prev {
+    left: 12px;
+}
+.carousel-btn.next {
+    right: 12px;
+}
+@media (max-width: 700px)/* 
+    Fungsi: 
+    Kode CSS ini mengatur gaya untuk tampilan responsif pada layar dengan lebar maksimum 700px.
+    Ini mengubah ukuran kontainer carousel dan gambar di dalamnya untuk memastikan tampilan yang baik pada perangkat kecil.
+*/ {
+    .carousel-container {
+        max-width: 98vw;
+    }
+    .carousel img {
+        border-radius: 8px;
+    }
+   
+}
+
+.carousel-dots/* 
+    Fungsi: 
+    Kode CSS ini mengatur gaya untuk kontainer titik navigasi pada carousel.
+    Titik-titik ini digunakan untuk menunjukkan gambar mana yang sedang ditampilkan dan memungkinkan pengguna untuk menavigasi antar gambar.
+*/{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+.carousel-dot /* 
+    Fungsi: 
+    Kode CSS ini mengatur gaya untuk titik navigasi pada carousel.
+    Setiap titik memiliki ukuran, bentuk, warna latar belakang, dan efek transisi saat dihover.
+*/{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #bbb;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: none;
+    outline: none;
+}
+.carousel-dot.active/* 
+    Fungsi: 
+    Kode CSS ini mengatur gaya untuk titik navigasi aktif pada carousel.
+    Titik aktif memiliki warna latar belakang yang berbeda untuk menunjukkan bahwa itu adalah gambar yang sedang ditampilkan.
+*/ {
+    background: #2c3e50;
+}
+@media screen and (max-width: 700px) /* 
+    Fungsi: 
+    Kode CSS ini mengatur gaya untuk tampilan responsif pada layar dengan lebar maksimum 700px.
+    Ini mengubah tata letak header, ukuran font, dan ukuran tombol carousel untuk memastikan tampilan yang baik pada perangkat kecil.
+*/{
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1.5rem;
+    }
+}
+/* 
+    Fungsi: 
+    Dokumentasi ini menjelaskan fungsi dari kode CSS yang diberikan. 
+    Silakan letakkan komentar ini di sebelah kode CSS untuk menjelaskan kegunaan setiap bagian kode.
+*/
