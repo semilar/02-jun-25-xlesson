@@ -1,21 +1,71 @@
+body {
+    background-color: rgb(100, 126, 126);
+}
+iframe {
+    display: none;
+}
 header{
     background-color: #2c3e50;
-    color: #fff;
+    color: #fff; 
     display: flex;
     justify-content: space-between;
     padding: 24px 32px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 2px;/* Fungsi:
+    Kode CSS ini mengatur gaya header pada halaman web.*/
 }
-nav a {
-    color: #ecf0f1;
-    text-decoration: none;
-    padding: 12px 16px;
-    transition: background-color 0.3s ease;
-    border-radius: 200px;
-    border-bottom: #ecf0f1 2px solid;
+header img {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+header img:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  margin: 4px;
+  background-color: #080d13;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  border: none;
+  font-weight: bold;
+}
+.nav-btn:hover,
+.nav-btn:focus {
+  background-color: #86b8ee;
+  transform: scale(1.05);
+}
+.nav-btn:active {
+  background-color: #79ade4;
+  transform: scale(0.97); /* Fungsi:
+  Kode CSS ini mengatur gaya tombol navigasi pada halaman web. */
+}
+.panorama {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(135deg, #151616, #202f3d);
+    color: #f1ebebd2;
+    border-radius: 25px;
+}
+.panorama h1 {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(19, 18, 18);
+    line-height: 15%;
+    margin-left: 35px;
 }
 
 .carousel-container {
@@ -27,8 +77,8 @@ nav a {
 }
 .carousel {
     display: flex;
-    transition: transform 0.5s cubic-bezier(.25,.8,.25,1);
-    will-change: transform;
+    transition: transform 0.5s cubic-bezier(.25,.8,.25,1); 
+    will-change: transform; 
 }
 .carousel img {
     min-width: 100%;
@@ -40,7 +90,8 @@ nav a {
         box-shadow 0.3s,
         z-index 0.3s;
     z-index: 1;
-    cursor: pointer;
+    cursor: pointer; /* Fungsi: Menambahkan efek hover pada gambar carousel */
+    object-fit: cover; /* Fungsi: Memastikan gambar mengisi area dengan baik */
 }
 .carousel img:hover {
     transform: scale(1.08);
@@ -116,7 +167,63 @@ nav a {
 */ {
     background: #2c3e50;
 }
-@media screen and (max-width: 700px) /* 
+
+/* 
+    Fungsi: 
+    Dokumentasi ini menjelaskan fungsi dari kode CSS yang diberikan. 
+    Silakan letakkan komentar ini di sebelah kode CSS untuk menjelaskan kegunaan setiap bagian kode.
+*/
+.bulat-ruang {
+    display: flex;
+    flex-direction: row;
+    justify-content:first baseline;
+    height: auto;
+    width: auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    font: optional;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    
+}
+.bulat-ruang img {
+     position:relative; /* Relative positioning for the circle */
+    width: 250px; 
+    height: 250px;
+    border-radius: 250%; 
+    object-fit: cover; 
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.90);
+    transition: transform 0.3s ease;
+
+}
+
+/* kode buat form */
+.output-container {
+      width: 45%;
+      border: 1px solid #000;
+      padding: 15px;
+        background-color: #f9f9f9;
+    }
+.bungkus-pesan {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.form-container, .output-container {
+  flex: 1 1 0;
+  max-width: 400px;
+}
+@media screen and (max-width: 760px) /* 
     Fungsi: 
     Kode CSS ini mengatur gaya untuk tampilan responsif pada layar dengan lebar maksimum 700px.
     Ini mengubah tata letak header, ukuran font, dan ukuran tombol carousel untuk memastikan tampilan yang baik pada perangkat kecil.
@@ -124,6 +231,13 @@ nav a {
     header {
         flex-direction: column;
         align-items: center;
+    }
+    .panorama h1 {
+        font-size: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
     }
     nav a {
         font-size: 12px;
@@ -134,9 +248,10 @@ nav a {
         height: 32px;
         font-size: 1.5rem;
     }
+    .bulat-ruang {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    
 }
-/* 
-    Fungsi: 
-    Dokumentasi ini menjelaskan fungsi dari kode CSS yang diberikan. 
-    Silakan letakkan komentar ini di sebelah kode CSS untuk menjelaskan kegunaan setiap bagian kode.
-*/

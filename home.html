@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet"  href="css/style.css">
 </head>
 <body>
    <header>
-    <img src= "image/logo revou.jpg" alt="Logo" style="width: 150px; height: 50px;">
-    <nav>
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        
-    </nav>
+    <img  src= "image/logo revou.jpg" alt="Logo" style="width: 150px; height: 50px; "  onclick="window.location.href='https://www.revou.co/masterclass?class=SE';">
+   <nav>
+  <a href="#hal1" class="nav-btn">Home</a>
+  <a href="#hal2" class="nav-btn">Famouse People</a>
+  <a href="#hal3" class="nav-btn">Message Us</a>
+  <a href="#hal4" class="nav-btn">Contact Me</a>
+</nav>
    </header>
    <hr/>
+  <br/>
 
-  
-<h1>PANORAMA</h1>
+ <div class="panorama">
+<h1 id="hal1">Hi,  selamat datan di my page</h1>
+<p>  Ini adalah halaman utama saya, di mana saya akan berbagi berbagai informasi menarik dan konten yang bermanfaat.</p>
+<!-- Carousel Section -->
 <div class="carousel-container">
   <div class="carousel" id="carousel">
     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Panorama 1" />
@@ -31,21 +36,72 @@
   <button class="carousel-btn next" id="nextBtn">&#10095;</button>
   <div class="carousel-dots" id="carouselDots"></div>
 </div>
-<!-- java -->
-
+</div> 
 
 <hr/>
-<!-- ...existing code... -->
+<h2 id="hal2"><b> Famouse People</b></h2>
+<div class="bulat-ruang">
+  <div class="bulat"><img src="image/mozart.jpg"><p>Wolfgang Amadeus Mozart</p>
+</div>
+  <div class="bulat"><img src="image/Beethoven.jpg"><p>Ludwig van Beethoven</p></div>
+  <div class="bulat"><img src="image/Paganini.jpg"><p>
+Niccolò Paganini</p>
+</div>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/447yaU_4DF8?si=sXT33_k-WCK9FL-S&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<hr/>
+  <h2 id="hal3">Message Us</h2>
+<div class="bungkus-pesan">
+ 
+    <form id="messageForm">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required> <br>
+
+      <label for="tgl">Tanggal Lahir:</label>
+      <input type="date" id="tgl" name="tgl" required><br>
+
+      <label>Jenis Kelamin:</label>
+      <div class="radio-group">
+        <input type="radio" id="laki" name="gender" value="Laki - Laki" checked>
+        <label for="laki">Laki-Laki</label>
+        <input type="radio" id="perempuan" name="gender" value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+      </div>
+
+      <label for="pesan">Pesan:</label><br>
+      <textarea id="pesan" name="pesan" required></textarea><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  
+
+  <div class="output-container" id="outputBox">
+    <p><strong>Current time :</strong> <span id="currentTime"></span></p>
+    <p><strong>Nama :</strong> <span id="outNama"></span></p>
+    <p><strong>Tanggal Lahir :</strong> <span id="outTgl"></span></p>
+    <p><strong>Jenis Kelamin :</strong> <span id="outGender"></span></p>
+    <p><strong>Pesan :</strong> <span id="outPesan"></span></p>
+  </div>
+  </div>
+
+<hr/>
+
+
    <footer>
-    <p>&copy; 2025 Panorama. All rights reserved.</p>
-    <p>Follow us on:
-        <a href="https://www.facebook.com">Facebook</a>,
-        <a href="https://www.twitter.com">Twitter</a>,
-        <a href="https://www.instagram.com">Instagram</a>
+    <p>&copy; 2025 Sholahuddin. All rights reserved.</p>
+    <p id="hal4">Follow us Me:
+        <a href="https://www.facebook.com/profile.php?id=100030248680741" target="_blank" >Facebook</a>,
+        <a href="https://wa.me/6285855435348" target="_blank">WhatsApp</a>,
+        <a href="https://www.instagram.com/habib_bin_syarkowi/" target="_blank">Instagram</a>
     </p>
+    <p style="text-align: right;
+  margin-right: 10px;  margin-bottom: 0%;">By Revou</p>
+  
    </footer>
    
 
     <script src="js/carousel.js"></script>
+    
 </body>
 </html>

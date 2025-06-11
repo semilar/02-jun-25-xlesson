@@ -31,3 +31,40 @@ setInterval(() => showSlide(index + 1), 4000);
 
 // Inisialisasi
 showSlide(0);
+
+
+// popup
+window.addEventListener("DOMContentLoaded", function() {
+  let nama = prompt("Masukkan nama Anda:", "Nama Anda");
+  if (nama && nama.trim() !== "") {
+    // Jadikan nama kapital semua huruf
+    nama = nama.trim().toUpperCase();
+    document.querySelector("h1").textContent = `Hi, ${nama} Selamat Datang di My Page`;
+  }
+});
+
+//pesan form
+const form = document.getElementById('messageForm');
+
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('currentTime').textContent = now.toString();
+    }
+
+    updateTime(); // Update saat pertama kali dibuka
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById('nama').value;
+      const tgl = document.getElementById('tgl').value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const pesan = document.getElementById('pesan').value;
+
+      document.getElementById('outNama').textContent = nama;
+      document.getElementById('outTgl').textContent = tgl;
+      document.getElementById('outGender').textContent = gender;
+      document.getElementById('outPesan').textContent = pesan;
+
+      updateTime(); // Update waktu saat submit
+    });
